@@ -32,7 +32,7 @@ const PORT = process.env.PORT || 8080
 //home
 app.get("/",(req,res)=>{
         res.status(200).send({
-            "success":true;
+            "success":true,
             "msg":"Node Server Running"
         })
 })
