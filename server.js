@@ -22,12 +22,6 @@ app.use(morgan('dev'))
 
 //Routes
 
-// app.get('',(req,res)=>{
-//     res.status(200).json({
-//         success:true,
-//         message:"Welcome to full Stack apps"
-//     })
-// })
 
 app.use('/api/v1/auth',require('./routes/userRoutes'))
 app.use('/api/v1/post',require('./routes/postRoutes'))
@@ -35,6 +29,13 @@ app.use('/api/v1/post',require('./routes/postRoutes'))
 //PORT
 
 const PORT = process.env.PORT || 8080
+//home
+app.get("/,(req,res)=>{
+        res.status(200).send({
+            "success":true;
+            "msg":"Node Server Running"
+        })
+})
 
 //listen
 app.listen(PORT,()=>{
